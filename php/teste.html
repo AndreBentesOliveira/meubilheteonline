@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+<style>
+*{position: relative;}
+body{ margin: 0; }
+
+.alinhamento{text-align: center;   
+margin-bottom: 10px;}
+
+#logo { 
+
+border: solid 1px black; 
+width: 20%;
+height: 50px;
+float: left;
+background-color: red;
+line-height: 50px;
+}
+
+#menu{
+
+border: solid 1px red;
+width: 77%;
+height: 50px;
+float: left;
+color: #fff;
+background-color: black;
+font-size: 12px;
+margin-left: 2%;
+line-height: 50px;
+}
+
+#main{
+width: 100%;
+height: 250px;
+float: left;
+background-color: #f43;
+line-height: 250px;
+text-align: center;
+}<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+<style>
+*{position: relative;}
+
+body{ margin: 0; }
+
+.alinhamento{text-align: center;   
+margin-bottom: 10px;}
+
+#logo { 
+
+border: solid 1px black; 
+width: 20%;
+height: 50px;
+float: left;
+background-color: red;
+line-height: 50px;
+}
+
+#menu{
+
+border: solid 1px red;
+width: 77%;
+height: 50px;
+float: left;
+color: #fff;
+background-color: black;
+font-size: 12px;
+margin-left: 2%;
+line-height: 50px;
+}
+
+#main{
+width: 100%;
+height: 250px;
+float: left;
+background-color: #f43;
+line-height: 250px;
+text-align: center;
+z-index: 1;
+
+}
+
+.widget{
+
+width: 100px;
+height: 100px;
+float: left;
+border: solid 1px black;
+margin: 60px 20px 0px 20px;
+border-radius: 100px;
+z-index: 3;
+}
+
+#animax{
+z-index:2;
+width: 100px;
+height: 100px;
+background-color: pink;
+top: 60px;
+left: 22px;
+border-radius: 100px;
+
+
+}
+#footer{
+
+width: 100%;
+height: 50px;
+float: left;
+background-color: blue;
+margin-top: 10px;
+
+
+
+}
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script> 
+$(document).ready(function(){
+    $("#animar").click(function(){
+        $("#animax").animate({left: '590px'},5000);
+    });
+
+	 $("#desanimar").click(function(){
+        $("#animax").animate({left: '20px'},5000);
+    });
+
+	});
+</script> 
+
+
+</head>
+
+
+<body>
+<div id="logo" class="alinhamento"> logo </div>
+<div id="menu" class="alinhamento"> <button id="animar"> ANIMAR </button> <button id="desanimar"> DESANIMAR </button></div>
+
+<div id="main"> 
+
+	<div class="widget"> </div>
+    <div class="widget"> </div>
+    <div class="widget"> </div>
+	<div class="widget"> </div>
+	<div class="widget"> </div>
+	
+<div id="animax"> </div>
+
+</div>
+
+<div id="footer"> </div>
+
+</body>
+</html>

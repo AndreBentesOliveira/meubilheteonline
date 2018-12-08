@@ -1,0 +1,36 @@
+<html>
+<head>
+<title> Cadastro de Usuário </title>
+</head>
+<body>
+<form method="POST" action="cadastrophp.php">
+<label>Nível</label>
+<select id="nivel" name="nivel">
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>	
+</select><br>
+<label>Nome Completo:</label><input type="text" name="nomecompleto" id="nomecompleto"><br>
+<label>RG</label><input type="text" name="logradouro" id="logradouro"><br>
+<label>CPF</label><input type="text" name="cep" id="cep"><br>
+<label>Titulo Eleitor</label><input type="text" name="email" id="email"><br>
+<label>Zona</label><input type="text" name="celular" id="celular"><br>
+<label>Quem indicou</label>$busca_query = mysql_query("SELECT cod_empresa,razao_social FROM tbl_empresa")or die(mysql_error());
+?>                                        
+                                            <select name="empresa_destino" id="form-field-1" class="col-xs-11 col-sm-6 col-md-8">
+                                                <option value="" selected disabled="disabled" hidden>Selecione a Empresa</option>
+
+                                                <?php while ($dados = mysql_fetch_array($busca_query)) { ?>
+
+                                            <option value="<?php echo $dados['cod_empresa']; ?>"><?php echo $dados['razao_social']; ?></option> <?php } ?>
+
+                                            </select>
+<input type="submit" value="Cadastrar" id="cadastrar" name="cadastrar">
+</form>
+</body>
+</html>
+
+ 
